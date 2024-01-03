@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pinkGrey"
+    tools:context=".activity.RealsActivity">
+
+
+    <ImageView
+        android:id="@+id/video_image"
+        android:layout_width="@dimen/video_wei_hei"
+        android:layout_height="0dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/select_image_or_video"
+        app:layout_constraintBottom_toTopOf="@+id/btn_select_video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/videoicon" />
+
+    <Button
+        android:id="@+id/btn_select_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/lightRed"
+        android:text="Galeriden video seç"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_reals"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/margin_start"
+        app:layout_constraintBottom_toTopOf="@+id/video_caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_image" />
+
+
+    <EditText
+        android:id="@+id/video_caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_horizon"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="54dp"
+        android:autofillHints="Caption"
+        android:background="@drawable/button_bg"
+        android:ems="10"
+        android:hint="Açıklama yaz..."
+        android:inputType="text"
+        android:padding="@dimen/edit_padding"
+        app:layout_constraintBottom_toTopOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_select_video" />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="175dp"
+        android:backgroundTint="@color/pinkLight"
+        android:paddingHorizontal="@dimen/edit_height"
+        android:paddingVertical="@dimen/margin_left_view"
+        android:text="İptal"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/margin_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_reals_post"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_caption" />
+
+    <Button
+        android:id="@+id/btn_reals_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:backgroundTint="@color/pinkLight"
+        android:paddingHorizontal="@dimen/padding_button_"
+        android:paddingVertical="10dp"
+        android:text="Paylaş"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/margin_start"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
